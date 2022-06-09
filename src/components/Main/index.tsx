@@ -1,9 +1,10 @@
 import styles from "./styles.module.scss"
+import { Contact } from "./Contact"
 
 export default function Main() {
   return (
-    <div className={styles.content}>
-      <h1 className={styles.text}></h1>
-    </div>
+    <main className={styles.content}>
+      <Contact />
+    </main>
   )
 }
