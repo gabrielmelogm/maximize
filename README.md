@@ -19,9 +19,11 @@ docker-compose up
 - postgres:latest
 
 ## ⚙️ Tools
+- ReactJs
 - NextJs
 - Docker
 - Typescript
 - Prisma
 - SASS
 - Axios
+- React Icons
