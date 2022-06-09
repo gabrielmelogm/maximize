@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  database:
+    image: postgres:latest
+    container_name: "maximize-db"
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: maximize
+      POSTGRES_PASSWORD: TesteMaximize
+      POSTGRES_DB: maximize
+    volumes:
+      - db:/var/lib/postgresql/data
+  server:
+    image: docker-nextjs-dev
+    depends_on:
+      - database
+    container_name: "maximize-server"
+    build: .
+    ports:
+      - 3000:3000
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+      - ./styles:/app/styles
+volumes:
+  db:
