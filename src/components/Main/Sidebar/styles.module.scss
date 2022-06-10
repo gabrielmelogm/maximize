@@ -1,0 +1,51 @@
+@import "/styles/theme.scss";
+
+.content {
+  width: 300px;
+  height: 100vh;
+  padding: 100px 60px 0px 0px;
+
+  .list {
+    list-style: none;
+    text-align: right;
+    font-family: $main-font;
+    font-size: 18px;
+    color: $secondary-black;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: flex-end;
+    cursor: pointer;
+
+    .listItem {
+
+      &:hover {
+        animation: slide-left 1.5s;
+      }
+    }
+  }
+
+  .listSeparator {
+    color: $main;
+    font-stretch: expanded;
+  }
+
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    color: $secondary-black;
+  }
+
+  50% {
+    color: $main;
+  }
+
+  100% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+    color: $main;
+  }
+}
