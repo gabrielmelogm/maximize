@@ -4,30 +4,95 @@
   width: 50%;
   height: 100vh;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  flex-direction: column;
 
   .contentImage {
-    position: relative;
-    // overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    .contentText {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-transform: uppercase;
-      color: transparent;
-      font-family: $main-font;
-      position: absolute;
-      bottom: 0;
-      left: -160px;
-      font-size: 293px;
+    $font-size: 15rem;
+
+    p {
       margin: 0;
-      -webkit-text-stroke-width: 2px;
-      -webkit-text-stroke-color: $main;
+      position: absolute;
+      top: 10.5rem;
+      left: 10rem;
+      color: $main-secondary;
+      z-index: 1;
+      -webkit-text-stroke: 1px;
+      -webkit-text-stroke-color: $main-secondary;
+      font-size: $font-size;
+      line-height: 13.438rem;
+      font-family: $main-font;
+      font-weight: 900;
+      text-transform: uppercase;
     }
 
+    p:nth-child(1) {
+      font-size: $font-size;
+      z-index: 0;
+      margin: 0;
+    }
+
+    .overlay {
+      color: transparent;
+    }
+
+  }
+
+  .contentFooter {
+    margin-top: 1.875rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    padding-left: 30%;
+
+    .line {
+      width: 0.125rem;
+      height: 70%;
+      background-color: $main;
+      position: absolute;
+    }
+
+    .titleContact {
+      font-family: $main-font;
+      text-transform: uppercase;
+      letter-spacing: 0.313rem;
+      color: $strong-gray;
+      padding-left: 2.188rem;
+    }
+
+    .contentContact {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 1.563rem;
+      padding-left: 2.188rem;
+  
+      .contentInformation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.625rem;
+
+        .icon {
+          font-size: 1.375rem;
+          color: $main;
+        }
+        
+        span {
+          font-family: $main-font;
+          font-weight: bold;
+          color: $strong-gray;
+          font-size: 1rem;
+        }
+      }
+        
+    }
   }
 
 }
