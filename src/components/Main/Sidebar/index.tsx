@@ -8,9 +8,12 @@ export function Sidebar() {
       <ul className={styles.list}>
         {
           sideItens.map((item, index) => {
+            if (item==="-") return (
+              <div className={styles.listSeparator}></div>
+            )
             return (
               <>
-                <li key={index} className={item==="-" ? styles.listSeparator : styles.listItem}>
+                <li key={index} className={`${styles.listItem} ${index > 7 && styles.listFooter}`}>
                   {item}
                 </li>
               </>

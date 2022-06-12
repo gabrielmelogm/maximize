@@ -1,17 +1,20 @@
 @import "/styles/theme.scss";
 
 .content {
-  width: 50%;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   
   input, textarea {
     border: none;
   }
 
   .form {
-    width: 31.875rem;
+    width: 100%;
+    max-width: 31.25rem;
+    padding-top: 2.813rem;
+    padding-left: 1.875rem;
     
     .contentInput {
       position: relative;
@@ -231,8 +234,9 @@
         .sendIcon {
           position: absolute;
           right: 20px;
-          bottom: 0.5rem;
+          bottom: calc(3.125rem / 2 - 1rem - 1px);
           color: $background;
+          transform: rotate(10deg);
         }
 
       }
