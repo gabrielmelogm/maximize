@@ -2,7 +2,7 @@
 
 .content {
   width: 100%;
-  height: calc(100vh - 3.125rem);
+  min-height: calc(100vh - 3.125rem);
   display: flex;
   flex-direction: column;
 
