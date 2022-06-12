@@ -1,6 +1,19 @@
 version: "3"
 
 services:
+  server:
+    depends_on:
+      - "database"
+    container_name: "maximize-server"
+    entrypoint: ./.docker/entrypoint.sh
+    build: .
+    ports:
+      - 3000:3000
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+      - ./styles:/app/styles
+      - ./prisma:/app/prisma
   database:
     image: postgres:latest
     container_name: "maximize-db"
@@ -12,17 +25,5 @@ services:
       POSTGRES_DB: maximize
     volumes:
       - db:/var/lib/postgresql/data
-  server:
-    image: docker-nextjs-dev
-    depends_on:
-      - database
-    container_name: "maximize-server"
-    build: .
-    ports:
-      - 3000:3000
-    volumes:
-      - ./src:/app/src
-      - ./public:/app/public
-      - ./styles:/app/styles
 volumes:
   db:

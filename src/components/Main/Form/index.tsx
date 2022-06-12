@@ -28,8 +28,8 @@ export function Form() {
           </div>
 
           <div className={styles.contentInput}>
-            <input className={styles.inputOutline} id="empresa" type="text" name="empresa" placeholder=" " required />
-            <label className={styles.labelInput} htmlFor="empresa">Empresa</label>
+            <input className={styles.inputOutline} id="company" type="text" name="company" placeholder=" " required />
+            <label className={styles.labelInput} htmlFor="company">Empresa</label>
           </div>
 
           <div className={styles.contentInput}>
@@ -38,8 +38,8 @@ export function Form() {
           </div>
 
           <div className={styles.contentInput}>
-            <input className={styles.inputOutline} id="telefone" type="text" name="telefone" placeholder=" " required />
-            <label className={styles.labelInput} htmlFor="telefone">Telefone</label>
+            <input className={styles.inputOutline} id="phone" type="text" name="phone" placeholder=" " required />
+            <label className={styles.labelInput} htmlFor="phone">Telefone</label>
           </div>
 
           <div className={styles.contentMessageInput}>
