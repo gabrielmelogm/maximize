@@ -246,3 +246,28 @@
   }
 
 }
+
+@media(max-width: 650px) {
+  .content {
+    
+    .form {
+      padding-left: 0;
+      padding: 0px 15px;
+      margin-bottom: 30px;
+
+      .contentFooterForm {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 0.875rem;
+        gap: 15px;
+
+        .buttonSubmit {
+          width: 100%;
+        }
+
+      }
+
+    }
+  }
+}
