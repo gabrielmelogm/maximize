@@ -18,12 +18,18 @@ docker-compose up
 - docker-nextjs-dev
 - postgres:latest
 
+## Stacks
+- React
+- Node
+- Postgres
+
 ## ⚙️ Tools
-- ReactJs
-- NextJs
 - Docker
+- NextJs
+- SASS
 - Typescript
 - Prisma
-- SASS
 - Axios
 - React Icons
+- Form serialize
+- Eslint

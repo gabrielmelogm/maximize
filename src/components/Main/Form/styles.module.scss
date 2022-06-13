@@ -224,6 +224,11 @@
           filter: brightness(0.9);
         }
 
+        &:disabled {
+          cursor: not-allowed;
+          filter: saturate(10%);
+        }
+
         span {
           color: $background;
           font-family: $main-font;

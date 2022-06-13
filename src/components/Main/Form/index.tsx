@@ -1,11 +1,34 @@
 import styles from "./styles.module.scss"
 import { FiSend } from "react-icons/fi"
 import { IoIosArrowDown } from "react-icons/io"
+import { FormEvent, useEffect, useState } from "react"
+import serialize from "form-serialize"
+import { phoneMask } from "../../../utils/phoneMask"
+import { formatFields } from "../../../utils/formatFields"
+import { api } from "../../../services/api"
 
 export function Form() {
+  const [ loading, setLoading ] = useState(false)
+  const [ number, setNumber ] = useState('')
+
+  async function handleSubmit(event: FormEvent) {
+    event.preventDefault()
+    setLoading(true)
+    const form: any = document.querySelector("#form")
+    const fieldsSerialize: any = serialize(form, { hash: true })
+    const fields = formatFields(fieldsSerialize)
+    await api.post("/", {fields})
+    setLoading(false)
+  }
+
+  useEffect(() => {
+    const response = phoneMask(number)
+    setNumber(response)
+  }, [number])
+
   return (
     <div className={styles.content}>
-      <form className={styles.form}>
+      <form id="form" className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.contentInput}>
           <label htmlFor="input-contact-type" className={styles.labelSelect}>
             Seu contato é relacionado a:
@@ -23,7 +46,7 @@ export function Form() {
         <div className={styles.contentGroupInputs}>
 
           <div className={styles.contentInput}>
-            <input className={styles.inputOutline} id="name" type="text" name="nome" placeholder=" " required />
+            <input className={styles.inputOutline} id="name" type="text" name="name" placeholder=" " required />
             <label className={styles.labelInput} htmlFor="name">Nome</label>
           </div>
 
@@ -38,7 +61,7 @@ export function Form() {
           </div>
 
           <div className={styles.contentInput}>
-            <input className={styles.inputOutline} id="phone" type="text" name="phone" placeholder=" " required />
+            <input className={styles.inputOutline} id="phone" type="text" name="phone" placeholder=" "  onChange={({ target }) => setNumber(target.value)} value={number} maxLength={15} required />
             <label className={styles.labelInput} htmlFor="phone">Telefone</label>
           </div>
 
@@ -50,11 +73,11 @@ export function Form() {
         <div className={styles.contentFooterForm}>
           <div className={styles.contentCheckbox}>
             <div className={styles.checkbox}>
-              <input className={styles.inputCheckbox} name="recaptcha" id="recaptcha" type="checkbox" />
+              <input className={styles.inputCheckbox} name="recaptcha" id="recaptcha" type="checkbox" required />
               <label className={styles.labelCheckbox} htmlFor="recaptcha">Não sou um robô</label>
             </div>
           </div>
-          <button className={styles.buttonSubmit} type="submit">
+          <button className={styles.buttonSubmit} disabled={loading} type="submit">
             <span>
               Enviar
             </span>
