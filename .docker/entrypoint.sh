@@ -1,2 +1,2 @@
 #!/bin/bash 
-npx prisma db push && yarn dev
+npx prisma db push && yarn && yarn dev

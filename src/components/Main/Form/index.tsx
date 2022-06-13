@@ -6,10 +6,13 @@ import serialize from "form-serialize"
 import { phoneMask } from "../../../utils/phoneMask"
 import { formatFields } from "../../../utils/formatFields"
 import { api } from "../../../services/api"
+import { toast, ToastContainer } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css';
 
 export function Form() {
   const [ loading, setLoading ] = useState(false)
   const [ number, setNumber ] = useState('')
+  const notify = () => toast.success("Dados cadastrados com sucesso!")
 
   async function handleSubmit(event: FormEvent) {
     event.preventDefault()
@@ -18,7 +21,11 @@ export function Form() {
     const fieldsSerialize: any = serialize(form, { hash: true })
     const fields = formatFields(fieldsSerialize)
     await api.post("/", {fields})
-    setLoading(false)
+    notify()
+    await setInterval(() => {
+      setLoading(false)
+      return location.reload()
+    }, 3000)
   }
 
   useEffect(() => {
@@ -28,6 +35,7 @@ export function Form() {
 
   return (
     <div className={styles.content}>
+      <ToastContainer />
       <form id="form" className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.contentInput}>
           <label htmlFor="input-contact-type" className={styles.labelSelect}>
