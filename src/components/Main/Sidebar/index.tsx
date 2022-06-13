@@ -2,7 +2,7 @@ import styles from "./styles.module.scss"
 
 const sideItens = ["Sobre", "Novidades", "Agenda", "Thay e Unicef", "Galeria", "São João da Thay", "Contato", "-", "Imprensa", "Fã-Clubes"]
 
-export function Sidebar() {
+function Sidebar() {
   return (
     <div className={styles.content}>
       <ul className={styles.list}>
@@ -24,3 +24,5 @@ export function Sidebar() {
     </div>
   )
 }
+
+export { Sidebar, sideItens }

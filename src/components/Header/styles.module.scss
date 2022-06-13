@@ -11,6 +11,14 @@
   top: 0;
   z-index: 1;
 
+  .menuButtonMobile {
+    display: none;
+  }
+
+  .contentMenuMobile {
+    display: none;
+  }
+
   .title {
     color: $main;
     font-size: 16px;
