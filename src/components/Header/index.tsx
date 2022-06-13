@@ -1,6 +1,7 @@
 import styles from "./styles.module.scss"
 import { BsInstagram, BsYoutube, BsTwitter, BsFacebook, BsSnapchat } from "react-icons/bs"
 import { FaTiktok } from "react-icons/fa"
+import { Menu } from "../Menu"
 
 const social = [
   {
@@ -49,6 +50,7 @@ function Header() {
           }
         </ul>
       </div>
+      <Menu />
     </header>
   )
 }

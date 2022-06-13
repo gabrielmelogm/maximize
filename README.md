@@ -33,3 +33,4 @@ docker-compose up
 - React Icons
 - Form serialize
 - Eslint
+- react-toastify
