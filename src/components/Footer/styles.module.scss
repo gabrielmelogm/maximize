@@ -9,27 +9,27 @@
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   align-items: center;
   justify-content: space-between;
-  padding: 0px 60px;
+  padding: 0rem 3.75rem;
 
   .copyright {
     color: #BDBDBD;
     font-family: $main-font;
     font-weight: lighter;
-    font-size: 10px;
+    font-size: 0.625rem;
   }
 
   .list {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 0.938rem;
     margin-left: auto;
   }
 
   button {
     border: none;
     color: $primary-black;
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,11 +47,11 @@
 
 @media(max-width: 650px) {
   .content {
-    padding: 10px 0px;
+    padding: 0.625rem 0rem;
 
     .copyright {
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 0.625rem;
     }
 
     .list {
