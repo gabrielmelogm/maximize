@@ -69,13 +69,13 @@ export function Form() {
           </div>
 
           <div className={styles.contentInput}>
-            <input className={styles.inputOutline} id="phone" type="text" name="phone" placeholder=" "  onChange={({ target }) => setNumber(target.value)} value={number} maxLength={15} required />
+            <input className={styles.inputOutline} id="phone" type="text" name="phone" placeholder=" "  onChange={({ target }) => setNumber(target.value)} value={number} minLength={15} maxLength={15} required />
             <label className={styles.labelInput} htmlFor="phone">Telefone</label>
           </div>
 
           <div className={styles.contentMessageInput}>
             <label htmlFor="message" className={styles.labelMessage}>Mensagem</label>
-            <textarea id="message" className={styles.inputMessage} name="message" placeholder="Digite aqui..." rows={5} required />
+            <textarea id="message" className={styles.inputMessage} name="message" placeholder="Digite aqui..." rows={5} maxLength={500} required />
           </div>
         </div>
         <div className={styles.contentFooterForm}>

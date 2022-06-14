@@ -39,6 +39,8 @@ function handler(req: NextApiRequest, res: NextApiResponse) {
     const { contact_type, name, company, email, phone, message, recaptcha } =
       fields;
 
+    if (!fields) return res.status(500).json({ error: "Fields is empty" });
+
     const emails = await verifyIfExist(email);
 
     if (emails.id_email) {
