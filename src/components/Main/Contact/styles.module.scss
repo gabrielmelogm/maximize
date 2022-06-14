@@ -12,22 +12,22 @@
     justify-content: center;
     position: relative;
     width: 100%;
-    max-width: 550px;
+    max-width: 34.375rem;
     margin: 0 auto;
 
-    $font-size: 225px;
+    $font-size: 14.063rem;
 
     p {
       margin: 0;
       position: absolute;
-      top: calc(325px - $font-size / 2);
+      top: calc(20.313rem - $font-size / 2);
       left: 0;
       color: $main-secondary;
       z-index: 1;
       -webkit-text-stroke: 1px;
       -webkit-text-stroke-color: $main-secondary;
       font-size: $font-size;
-      line-height: 170px;
+      line-height: 10.625rem;
       font-family: $main-font;
       font-weight: 900;
       text-transform: uppercase;
@@ -47,7 +47,7 @@
 
   .contentFooter {
     width: 100%;
-    max-width: 340px;
+    max-width: 21.25rem;
     margin: 1.5rem auto;
     display: flex;
     align-items: flex-start;
@@ -72,7 +72,7 @@
     }
 
     .contentContact {
-      width: 550px;
+      width: 34.375rem;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -108,12 +108,12 @@
   .content {
     .contentImage {
       p {
-        font-size: 150px;
+        font-size: 9.375rem;
         z-index: 0;
       }
 
       p:nth-child(1) {
-        font-size: 150px;
+        font-size: 9.375rem;
       }
     }
 
@@ -121,8 +121,8 @@
       .contentContact {
         flex-direction: column;
         align-items: flex-start;
-        gap: 2px;
-        width: 450px;
+        gap: 0.125rem;
+        width: 28.125rem;
       }
     }
 
@@ -135,11 +135,11 @@
     .contentImage {
       
       p {
-        font-size: 130px;
+        font-size: 8.125rem;
       }
 
       p:nth-child(1) {
-        font-size: 130px;
+        font-size: 8.125rem;
       }
 
     }
@@ -149,7 +149,7 @@
       .contentContact {
         flex-direction: column;
         align-items: flex-start;
-        gap: 2px;
+        gap: 0.125rem;
         width: 100%;
       }
 

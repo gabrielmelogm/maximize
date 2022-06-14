@@ -2,11 +2,11 @@
 
 .content  {
   width: 100%;
-  height: 120px;
+  height: 7.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 60px;
+  padding: 0rem 3.75rem;
   position: absolute;
   top: 0;
   z-index: 1;
@@ -21,7 +21,7 @@
 
   .title {
     color: $main;
-    font-size: 16px;
+    font-size: 1rem;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
   }
@@ -29,13 +29,13 @@
   .list {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 0.938rem;
 
     .listItem {
       border: none;
       color: $background;
-      width: 30px;
-      height: 30px;
+      width: 1.875rem;
+      height: 1.875rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -55,7 +55,7 @@
 
 @media(max-width: 650px) {
   .content {
-    padding: 0px 15px;
+    padding: 0rem 0.938rem;
 
     .list {
       display: none;
