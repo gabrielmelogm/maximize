@@ -1,24 +1,28 @@
-<div aligmn="center">
+<div align="center">
   <h1>Teste maximize</h1>
+  <img src="/public/readme-image.jpg" width="500px" />
 </div>
-Formulário de contato Thaynara OG para o teste da maximize
+<div align="center">
+  <b>Formulário de contato Thaynara OG para o teste da maximize</b>
+</div>
 
 ## 🏁 Start
+1. Crie o arquivo <code>.env</code> na raiz do projeto
+2. Rode o comando
 ```bash
 yarn dev
 ```
 
 ## 🐳 Starting with docker
+1. Crie o arquivo <code>.env</code> na raiz do projeto
+2. Rode o comando e espere subir o container
 ```bash
-docker-compose up
+docker-compose up -d
 ```
 
-### Docker images
-- node:16-alpine
-- docker-nextjs-dev
-- postgres:latest
+# ⬇️ About Project
 
-## Stacks
+## 🚀 Stacks
 - React
 - Node
 - Postgres
@@ -34,3 +38,7 @@ docker-compose up
 - Form serialize
 - Eslint
 - react-toastify
+
+## 🐳 Docker images
+- node:16-alpine
+- postgres:latest
